@@ -13,9 +13,9 @@
 
 ### About
 
-Laravel Package to perform word replacement on files using document templates (.rtf) that have been provided.
+Laravel Package to perform word replacement on files using document templates (`.rtf`) that have been provided.
 
-[ID] Package Laravel untuk melakukan penggantian kata pada file menggunakan template dokumen (.rtf) yang sudah disediakan.
+[ID] Package Laravel untuk melakukan penggantian kata pada file menggunakan template dokumen (`.rtf`) yang sudah disediakan.
 
 ![Example](https://raw.githubusercontent.com/novay/laravel-word-template/master/example.png)
 
@@ -35,7 +35,7 @@ Laravel Package to perform word replacement on files using document templates (.
     Uses package auto discovery feature, no need to edit the `config/app.php` file.
 
     * Laravel 5.4 and below
-    Register the package with laravel in `config/app.php` under `providers` with the following:
+    Register the package with laravel in `config/app.php` under `providers` and `aliases` with the following:
 
     ```php
         'providers' => [
@@ -43,7 +43,7 @@ Laravel Package to perform word replacement on files using document templates (.
             Novay\WordTemplate\WordTemplateServiceProvider::class,
         ];
 
-        'alias' => [
+        'aliases' => [
         ...
            'WordTemplate' => Novay\WordTemplate\Facade::class, 
         ];
@@ -51,17 +51,17 @@ Laravel Package to perform word replacement on files using document templates (.
 
 ### Panduan Penggunaan [ID]
 1. Siapkan template yang ingin Anda gunakan, pastikan template berupa file dokumen. Sebagai contoh anda bisa menggunakan [contoh ini](https://raw.githubusercontent.com/novay/laravel-word-template/master/surat_pernyataan.rtf). 
-Jika tidak langsung terunduh secara otomatis, kamu bisa tekan `Ctrl+S` untuk menyimpan secara manual dengan format `.rtf`.
+Jika tidak langsung terunduh secara otomatis, kamu bisa tekan `Ctrl+S` untuk menyimpan secara manual dengan format `.rtf`. Setelah terdownload cukup letakkan file tersebut di folder `public` atau dimanapun anda mau.
 
 2. Silahkan bermain-main dengan `facade` ini:
 
 ```
-	WordTemplate('file.rtf', array(), 'nama_file.doc');
+	WordTemplate::export('file.rtf', array(), 'nama_file.doc');
 ``` 
 
 Method ini membutuhkan 3 parameter didalam penggunaannya:
 
-- Lokasi file dokumen yang menjadi template Anda `Contoh. public_path('template/document.rtf')`
+- Lokasi file dokumen yang menjadi template Anda `Contoh: public_path('template/document.rtf')`
 - Kumpulan kata-kata awal beserta kata penggantinya dalam bentuk array. [Lihat contoh](https://github.com/novay/laravel-word-template/blob/master/sample.php)
 - Tentukan nama file yang diinginkan ketika file diunduh. `Contoh. file.doc`
 
