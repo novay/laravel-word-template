@@ -7,6 +7,7 @@
 - [About](#about)
 - [Requirements](#requirements)
 - [Installation Instructions](#installation-instructions)
+- [Panduan Penggunaan](#penggunaan)
 - [Basic Usage](#usage)
 - [License](#license)
 
@@ -46,7 +47,48 @@ Laravel Package to perform word replacement on files using document templates (.
         ];
     ```
 
-### Basic Usage
+### Panduan Penggunaan [ID]
+1. Siapkan template yang ingin Anda gunakan, pastikan template berupa file dokumen. Sebagai contoh anda bisa menggunakan [contoh ini](https://raw.githubusercontent.com/novay/laravel-word-template/master/surat_pernyataan.rtf). 
+Jika tidak langsung terunduh secara otomatis, kamu bisa tekan `Ctrl+S` untuk menyimpan secara manual dengan format `.rtf`.
+
+2. Silahkan bermain-main dengan `facade` ini:
+
+```
+	WordTemplate('file.rtf', array(), 'nama_file.doc');
+``` 
+
+Method ini membutuhkan 3 parameter didalam penggunaannya:
+
+- Lokasi file dokumen yang menjadi template Anda `Contoh. public_path('template/document.rtf')`
+- Kumpulan kata-kata awal beserta kata penggantinya dalam bentuk array. [Lihat contoh](https://github.com/novay/laravel-word-template/blob/master/sample.php)
+- Tentukan nama file yang diinginkan ketika file diunduh. `Contoh. file.doc`
+
+
+3. `Contoh` Agar cepat, salin baris berikut ke dalam file `routes.php` Anda :
+
+```php
+    Route::get('/', function () {
+		$file = public_path('surat_pernyataan.rtf');
+		
+		$array = array(
+			'[NOMOR_SURAT]' => '015/BT/SK/V/2017',
+			'[PERUSAHAAN]' => 'CV. Borneo Teknomedia',
+			'[NAMA]' => 'Melani Malik',
+			'[NIP]' => '6472065508XXXX',
+			'[ALAMAT]' => 'Jl. Manunggal Gg. 8 Loa Bakung, Samarinda',
+			'[PERMOHONAN]' => 'Permohonan pengurusan pembuatan NPWP',
+			'[KOTA]' => 'Samarinda',
+			'[DIRECTOR]' => 'Noviyanto Rahmadi',
+			'[TANGGAL]' => date('d F Y'),
+		);
+
+		$nama_file = 'surat-keterangan-kerja.doc';
+		
+		return WordTemplate::export($file, $array, $nama_file);
+	});
+```
+
+### Basic Usage [EN]
 1. You need to prepare the template document that you want, for example you can download [this file](https://raw.githubusercontent.com/novay/laravel-word-template/master/surat_pernyataan.rtf). 
 If it is not downloading automatically, you can just press `Ctrl+S` to save it manually as `.rtf` file.
 
