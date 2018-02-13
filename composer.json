@@ -1,0 +1,35 @@
+{
+    "name": "novay/laravel-word-template",
+    "description": "Package Laravel untuk melakukan penggantian kata pada file menggunakan template dokumen (.rtf) yang sudah disediakan.",
+    "keywords": ["laravel", "word", "rtf", "export"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Noviyanto Rahmadi",
+            "email": "novay@enterwind.com"
+        }
+    ],
+    "require": {
+        "php" : ">=5.5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Novay\\WordTemplate\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Novay\\WordTemplate\\Test\\": "tests/"
+        }
+    },
+   "extra": {
+       "laravel": {
+           "providers": [
+               "Novay\\WordTemplate\\WordServiceProvider"
+           ],
+           "aliases": {
+               "WordTemplate" : "Novay\\WordTemplate\\Facade"
+           }
+       }
+   }
+}

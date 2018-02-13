@@ -1,0 +1,58 @@
+### OSX BOOGERS ###
+.DS_Store
+*._DS_Store
+._.DS_Store
+*._
+._*
+._.*
+
+### WINDOWS BOOGERS ###
+Thumbs.db
+
+### Sass ###
+#bower_components/*
+/.sass-cache/*
+.sass-cache
+
+### SUBLIMETEXT BOOGERS ###
+*.sublime-workspace
+.phpintel/*
+/.phpintel/*
+*.php-temp
+
+### PHPSTORM BOOGERS ###
+.idea/*
+/.idea/*
+
+### DIFFERENT TYPE OF MASTER CONFIGS ###
+.env
+.env-dev
+.env-live
+.env.dev
+.env.production
+.env-*
+/config/blog.php
+/sql
+composer.lock
+
+### ASSET EXCLUSIONS ###
+/ref
+/node_modules
+/public/css/**
+/public/js/**
+/public/build/**
+/public/docs/**
+/public/build/rev-manifest.json
+/public/js/app.js
+/storage/**
+/vendor
+Homestead.json
+Homestead.yaml
+
+### Ignore Token Generationg Certificates
+/storage/oauth-private.key
+/storage/oauth-public.key
+storage/oauth-private.key
+storage/oauth-public.key
+**/storage/oauth-private.key
+**/storage/oauth-public.key
