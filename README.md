@@ -53,7 +53,7 @@ If it's not downloading automatically, you can just press Ctrl+S to save it manu
 2. You can use this `facade` to play with this :
 
 ```
-	WordTemplate('file.rtf', array(), 'nama_file.doc');
+WordTemplate('file.rtf', array(), 'nama_file.doc');
 ``` 
 
 This method has 3 parameters:
