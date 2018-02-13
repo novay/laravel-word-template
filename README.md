@@ -47,8 +47,8 @@ Laravel Package to perform word replacement on files using document templates (.
     ```
 
 ### Basic Usage
-1. You need to prepare the template document that you want, for example you can download [This File](https://raw.githubusercontent.com/novay/laravel-word-template/master/surat_pernyataan.rtf). 
-If it's not downloading automatically, you can just press Ctrl+S to save it manually as .rtf file.
+1. You need to prepare the template document that you want, for example you can download [this file](https://raw.githubusercontent.com/novay/laravel-word-template/master/surat_pernyataan.rtf). 
+If it is not downloading automatically, you can just press `Ctrl+S` to save it manually as `.rtf` file.
 
 2. You can use this `facade` to play with this :
 
@@ -56,7 +56,7 @@ If it's not downloading automatically, you can just press Ctrl+S to save it manu
 	WordTemplate('file.rtf', array(), 'nama_file.doc');
 ``` 
 
-This method has 3 parameters:
+This method needs you to specify 3 parameters in it:
 
 - Location of your document template file `Ex. public_path('template/document.rtf')`
 - The initial words along with their replacement in the arrays form. [See example](https://github.com/novay/laravel-word-template/blob/master/sample.php)
