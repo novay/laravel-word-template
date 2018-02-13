@@ -62,7 +62,7 @@ This method has 3 parameters:
 - Specifies the file name when the file is downloaded `Ex. file.doc`
 
 
-3. (Example) Copy this file in your routes directly for the instance :
+3. `Example` Copy this file in your routes directly for the instance :
 
 ```php
     Route::get('/', function () {
