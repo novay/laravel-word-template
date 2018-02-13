@@ -17,6 +17,8 @@ Laravel Package to perform word replacement on files using document templates (.
 
 [ID] Package Laravel untuk melakukan penggantian kata pada file menggunakan template dokumen (.rtf) yang sudah disediakan.
 
+![Example](https://raw.githubusercontent.com/novay/laravel-word-template/master/example.png)
+
 ### Requirements
 * [Laravel 5.1, 5.2, 5.3, 5.4, or 5.5+](https://laravel.com/docs/installation)
 
