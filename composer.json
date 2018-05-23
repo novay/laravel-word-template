@@ -25,7 +25,7 @@
    "extra": {
        "laravel": {
            "providers": [
-               "Novay\\WordTemplate\\WordServiceProvider"
+               "Novay\\WordTemplate\\WordTemplateServiceProvider"
            ],
            "aliases": {
                "WordTemplate" : "Novay\\WordTemplate\\Facade"
