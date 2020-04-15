@@ -9,7 +9,7 @@ class WordTemplate
         // 
     }
 
-    public function export($file = null, $replace = null, $filename = 'default.doc') 
+    public static function export($file = null, $replace = null, $filename = 'default.doc') 
     {
         if(is_null($file))
             return response()->json(['error' => 'This method needs some parameters. Please check documentation.']);
@@ -17,7 +17,7 @@ class WordTemplate
         if(is_null($replace))
             return response()->json(['error' => 'This method needs some parameters. Please check documentation.']);
 
-        $dokumen = $this->verify($file);
+        $dokumen = self::verify($file);
         
         foreach($replace as $key => $value) {
             $dokumen = str_replace($key, $value, $dokumen);
@@ -30,7 +30,7 @@ class WordTemplate
         echo $dokumen;
     }
 
-    public function verify($file) 
+    public static function verify($file) 
     {
         $arrContextOptions = array(
             "ssl" => array(
