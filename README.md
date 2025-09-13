@@ -8,3 +8,39 @@
 
 ![Example](https://raw.githubusercontent.com/novay/laravel-word-template/refs/heads/master/examples/laravel-wordtemplate.png)
 
+### 🚀 Installation
+
+```bash
+composer require novay/laravel-word-template
+```
+
+Publish the configuration:
+```bash
+php artisan vendor:publish --tag=word-config
+```
+
+### ⚡ Basic Usage
+
+#### 1️⃣ Replace Value
+```php
+return Word::template(storage_path('app/templates/replace-values.docx'))
+    ->replaceValue('nama', 'Novianto Rahmadi')
+    ->replaceValue('app', 'Laravel WordTemplate')
+    ->download('output.docx');
+```
+
+#### 2️⃣ Replace Images
+```php
+return Word::template(storage_path('app/templates/template.docx'))
+    ->replaceImage('logo', public_path('logo.png'), [
+        'width' => 120,
+        'height'=> 120,
+        'ratio' => true
+    ])
+    ->download('output.docx');
+```
+
+### 📚 Full Documentation
+
+For more comprehensive documentation, please visit:
+👉 [https://word.btekno.id](https://word.btekno.id)
