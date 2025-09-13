@@ -1,35 +1,48 @@
 {
     "name": "novay/laravel-word-template",
-    "description": "Package Laravel untuk melakukan penggantian kata pada file menggunakan template dokumen (.rtf) yang sudah disediakan.",
-    "keywords": ["laravel", "word", "rtf", "export"],
+    "description": "Package Laravel untuk melakukan penggantian kata pada file menggunakan template dokumen (.doc atau .docx) yang sudah disediakan.",
+    "keywords": ["laravel", "word", "rtf", "export", "doc", "docx"],
+    "type": "library",
     "license": "MIT",
     "authors": [
         {
-            "name": "Noviyanto Rahmadi",
-            "email": "novay@enterwind.com"
+            "name": "Novianto Rahmadi",
+            "email": "novay@btekno.id"
         }
     ],
     "require": {
-        "php" : ">=5.5.0"
+        "php": ">=8.1",
+        "phpoffice/phpword": "^1.4"
+    },
+    "require-dev": {
+        "pestphp/pest": "^3.0",
+        "pestphp/pest-plugin-laravel": "^3.0",
+        "mockery/mockery": "^1.6",
+        "phpunit/phpunit": "^10.0"
     },
     "autoload": {
         "psr-4": {
-            "Novay\\WordTemplate\\": "src/"
+            "Novay\\Word\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Novay\\WordTemplate\\Test\\": "tests/"
+            "Novay\\Word\\Tests\\": "tests/"
         }
     },
-   "extra": {
-       "laravel": {
-           "providers": [
-               "Novay\\WordTemplate\\WordTemplateServiceProvider"
-           ],
-           "aliases": {
-               "WordTemplate" : "Novay\\WordTemplate\\Facade"
-           }
-       }
-   }
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Novay\\Word\\Providers\\WordServiceProvider"
+            ],
+            "aliases": {
+                "Word": "Novay\\Word\\Facades\\Word"
+            }
+        }
+    }, 
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "test": "pest"
+    }
 }
