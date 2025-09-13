@@ -4,5 +4,7 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/novay/laravel-word-template.svg?style=flat-square)](https://packagist.org/packages/novay/laravel-word-template)
 [![License](https://img.shields.io/github/license/novay/laravel-word-template.svg?style=flat-square)](LICENSE.md)
 
-Laravel Word Template adalah package Laravel berbasis [PHPWord](https://github.com/PHPOffice/PHPWord) untuk membuat, memanipulasi, dan mengekspor dokumen Word/Office. Dukungan lengkap untuk **template replace, looping, gambar, builder mode, multi-format export (DOCX, PDF, ODT, HTML)**, watermark, merge, hingga tanda tangan digital. 
+**Laravel Word Template** is a Laravel package built on top of **[PHPWord](https://github.com/PHPOffice/PHPWord)** for creating, manipulating, and exporting Word/Office documents. It offers full support for **template replacement, looping, images, builder mode**, watermarks, merging, and even digital signatures.
+
+![Example](https://raw.githubusercontent.com/novay/laravel-word-template/refs/heads/master/examples/laravel-wordtemplate.png)
 
