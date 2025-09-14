@@ -16,12 +16,12 @@ class WordServiceProvider extends ServiceProvider
         // Publish config
         $this->publishes([
             __DIR__ . '/../../config/word.php' => config_path('word.php'),
-        ], 'config');
+        ], 'word-config');
 
         // Publish templates
         $this->publishes([
-            __DIR__ . '/../../resources/templates' => resource_path('word-templates'),
-        ], 'templates');
+            __DIR__ . '/../../examples' => storage_path('app/word'),
+        ], 'word-templates');
 
         // Register Artisan commands
         if ($this->app->runningInConsole()) {
@@ -58,8 +58,3 @@ class WordServiceProvider extends ServiceProvider
         return ['word'];
     }
 }
-
-// composer require btekno/laravel-word-template
-// php artisan vendor:publish --tag=config
-// php artisan vendor:publish --tag=templates
-// php artisan word:publish-templates
