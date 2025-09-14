@@ -16,7 +16,7 @@ composer require novay/laravel-word-template
 
 Publish the configuration:
 ```bash
-php artisan vendor:publish --tag=word-config
+php artisan vendor:publish --provider="Novay\Word\Providers\WordServiceProvider"
 ```
 
 ### ⚡ Basic Usage
