@@ -24,15 +24,15 @@ php artisan vendor:publish --provider="Novay\Word\Providers\WordServiceProvider"
 #### 1️⃣ Replace Value
 ```php
 return Word::template(storage_path('app/templates/replace-values.docx'))
-    ->replaceValue('nama', 'Novianto Rahmadi')
-    ->replaceValue('app', 'Laravel WordTemplate')
+    ->setValue('nama', 'Novianto Rahmadi')
+    ->setValue('app', 'Laravel WordTemplate')
     ->download('output.docx');
 ```
 
 #### 2️⃣ Replace Images
 ```php
 return Word::template(storage_path('app/templates/template.docx'))
-    ->replaceImage('logo', public_path('logo.png'), [
+    ->setImage('logo', public_path('logo.png'), [
         'width' => 120,
         'height'=> 120,
         'ratio' => true
